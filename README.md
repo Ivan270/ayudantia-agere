@@ -52,6 +52,9 @@
         └───vendors
 ```
 
+*Puedes crear la estructura de carpetas completa de la siguiente forma (debes tener creada la carpeta assets y dentro de esta, scss):*  
+`mkdir -p assets/scss/{abstracts,base,components,layout,pages,themes,vendors}`  
+
 #### Orden de importación en el manifiesto
 En main.scss # Manifest file
 **Recuerda usar el guión bajo antes de cada parcial**  
