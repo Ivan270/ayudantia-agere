@@ -45,7 +45,7 @@ ul {
 }
 .hero__image {
   position: relative;
-  background-image: url("/assets/img/img-1.png");
+  background-image: url("./assets/img/img-1.png");
   background-repeat: no-repeat;
   background-size: cover;
   flex: 3;
@@ -168,7 +168,7 @@ ul {
   left: -9%;
 }
 .about__image {
-  background-image: url("/assets/img/img-2.png");
+  background-image: url("./assets/img/img-2.png");
   flex: 1;
   min-width: 400px;
   height: 100%;
