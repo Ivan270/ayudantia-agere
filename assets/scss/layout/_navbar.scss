@@ -1,20 +1,36 @@
 .navbar {
     font-family: $mono;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     padding: 1% 4%;
+    min-width: 400px;
 
+    // ::after crea un seudo-elemento que será el ultimo hijo del elemento seleccionado.
+    &::after {
+        // Clearfix hack: https://www.w3schools.com/css/css_float_clear.asp
+        content: "";
+        // Cuando se utiliza la propiedad float y se quiere que el siguiente elemento se posicione por debajo, será recomendable utilizar la propiedad clear.
+        // clear especifica que debe pasar con el elemento al lado del flotante 
+        // left => elemento se empuja debajo de los flotantes: left
+        // right => elemento se empuja debajo de los flotantes: right
+        // both: elemento se empuja debajo de todos los flotantes (left y right)
+        clear: both;
+        display: table;
+    }
+
+    // Tanto el __menu como __actions flotan a la izquierda y derecha respectivamente. Esto ocasionará que los elementos con float se desborden del contenedor principal.
     &__menu {
+        // Elemento flotará a la izquierda de su contenedor
+        float: left;
         display: flex;
         flex-wrap: wrap;
-
         align-items: center;
         gap: $sp4;
     }
     &__logo {
         width: 3rem;
         margin-right: 2rem;
+    }
+    &__actions {
+        // Elemento flotará a la derecha de su contenedor
+        float: right;
     }
 }

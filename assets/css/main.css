@@ -15,13 +15,16 @@ ul {
 
 .navbar {
   font-family: "PT Mono", monospace;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
   padding: 1% 4%;
+  min-width: 400px;
+}
+.navbar::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 .navbar__menu {
+  float: left;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -30,6 +33,9 @@ ul {
 .navbar__logo {
   width: 3rem;
   margin-right: 2rem;
+}
+.navbar__actions {
+  float: right;
 }
 
 .hero {
