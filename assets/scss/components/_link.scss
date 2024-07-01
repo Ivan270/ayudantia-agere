@@ -1,0 +1,8 @@
+.link {
+    color: $quick-silver;
+    font-size: $lg;
+    font-weight: $thin;
+    &:hover {
+        color: $black;
+    }
+}

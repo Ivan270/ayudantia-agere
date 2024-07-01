@@ -1,0 +1,66 @@
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    height: 45vh;
+    font-family: $roboto;
+
+    // Contenedor de la izquierda con texto
+    &__content {
+        // flex: [flex-grow (default: 0, se ajusta al tamaño dependiendo del contenido)] [flex-shrink (opcional, default:1)] [flex-basis (opcional, default:auto)];
+        // Se recomienda utilizar esta propiedad atajo en vez de las propiedades individuales. El atajo configura los otros valores de forma inteligente.
+        // grow: cuanto crecerá el elemento en relación al resto de los flex-items (hijos de un element flex) en el mismo contenedor
+        flex: 1;
+        height: 100%;
+        min-width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__title {
+        font-family: $mono;
+        width: 80%;
+        margin: 0 auto;
+    }
+    &__description {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    // Contenedor del centro con el mapa
+    &__map {
+        flex: 1;
+        height: 100%;
+        min-width: 400px;
+        background-color: $blue-de-france;
+        position: relative;
+        &-image {
+            position: absolute;
+            width: 80%;
+            height: 70%;
+            object-fit: cover;
+            bottom: 0;
+            left: -6%;
+        }
+    }
+
+    &__coffee {
+        width: 120px;
+        aspect-ratio: 1/2;
+        object-fit: cover;
+        object-position: 0;
+        position: absolute;
+        left: -9%;
+    }
+
+    // Contenedor de la derecha con imagen de cafetera
+    &__image {
+        background-image: url("/assets/img/img-2.png");
+        flex: 1;
+        min-width: 400px;
+        height: 100%;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: 0;
+    }
+}
