@@ -3,7 +3,7 @@
     padding: 1% 4%;
     min-width: 400px;
 
-    // ::after crea un seudo-elemento que será el ultimo hijo del elemento seleccionado.
+    // ::after crea un seudo-elemento que será el ultimo hijo del elemento seleccionado. Esto se hace para que el elemento .navbar contenga todos los elementos flotantes en su interior.
     &::after {
         // Clearfix hack: https://www.w3schools.com/css/css_float_clear.asp
         content: "";
